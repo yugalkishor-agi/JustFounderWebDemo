@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi_Complete/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff2') format('woff2');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor';
+  src: url('/fonts/Technor_Complete/Technor_Complete/Fonts/WEB/fonts/Technor-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Khand';
+  src: url('/fonts/Khand_Complete/Khand_Complete/Fonts/WEB/fonts/Khand-Variable.woff2') format('woff2');
+  font-weight: 300 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('/fonts/Panchang_Complete/Panchang_Complete/Fonts/WEB/fonts/Panchang-Variable.woff2') format('woff2');
+  font-weight: 200 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@theme {
+  --font-sans: "Satoshi", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Technor", "Playfair Display", Georgia, serif;
+  --font-khand: "Khand", sans-serif;
+  --font-panchang: "Panchang", sans-serif;
+  
+  --color-brand-orange: #ff5722;
+  --color-brand-dark: #1f2937;
+  
+  --animate-fade-in-up: fade-in-up 0.7s ease-out forwards;
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #fcfcfc;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+.section-title {
+  font-family: var(--font-panchang);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-title::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 16px;
+  background-color: var(--color-brand-orange);
+}

@@ -1,4 +1,4 @@
-import { Search, ChevronLeft, ChevronRight, Rocket, Coins, TrendingUp, Users, BookOpen, Calendar, Play } from 'lucide-react';
+import { Search, Rocket, Coins, TrendingUp, Users, BookOpen, Calendar, Play } from 'lucide-react';
 
 const TopBar = () => (
   <div className="bg-[#ff5722] text-white text-[10px] sm:text-xs font-medium py-2 px-4 flex flex-col sm:flex-row justify-between items-center gap-2">
